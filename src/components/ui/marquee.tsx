@@ -27,9 +27,12 @@ export function Marquee({
           className={cn(
             "flex shrink-0 items-center justify-around gap-[var(--gap)] pr-[var(--gap)] animate-marquee",
             reverse && "[animation-direction:reverse]",
-            pauseOnHover && "group-hover:[animation-play-state:paused]"
+            pauseOnHover && "marquee-pause-on-hover"
           )}
-          style={{ animationDuration: speed }}
+          style={{
+            animationDuration: speed,
+            WebkitAnimationDuration: speed,
+          } as React.CSSProperties}
         >
           {children}
         </div>

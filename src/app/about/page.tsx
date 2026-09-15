@@ -11,9 +11,9 @@ import { companyStory, mission, vision, whyChooseUs, technologyPhilosophy } from
 import { howWeWork } from "@/constants/timeline";
 
 export const metadata: Metadata = buildMetadata({
-  title: "About Blugent",
+  title: "About Blugent | AI Innovation Company",
   description:
-    "Blugent is an enterprise AI company building autonomous agents, RAG platforms, and intelligent automation. Our story, mission, vision, and development process.",
+    "Learn about Blugent - a team of AI engineers and consultants building the future of enterprise automation.",
   path: "/about",
 });
 

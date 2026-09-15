@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo";
-import { siteConfig } from "@/constants/site";
 import { Hero } from "@/components/sections/hero";
 import { MarqueeStrip } from "@/components/sections/marquee-strip";
 import { StatsBar } from "@/components/sections/stats-bar";
@@ -16,8 +15,9 @@ import { Faq } from "@/components/sections/faq";
 import { Cta } from "@/components/sections/cta";
 
 export const metadata: Metadata = buildMetadata({
-  title: `${siteConfig.name} — ${siteConfig.tagline}`,
-  description: siteConfig.description,
+  title: "Blugent | Best AI Solutions & Automation Agency",
+  description:
+    "India's leading AI solutions company. We build custom AI agents, automation workflows, and ML models for enterprise businesses.",
   path: "/",
   keywords: ["enterprise AI", "AI agents", "RAG", "AI automation", "machine learning consulting"],
 });

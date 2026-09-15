@@ -155,10 +155,12 @@
   html {
     @apply font-sans scroll-smooth;
     color-scheme: dark;
+    overflow-x: hidden;
   }
 
   body {
     @apply bg-background text-foreground antialiased;
+    overflow-x: hidden;
     /* Ultra-dark luxury background with faint signature glow */
     background-color: #050505;
     background-image:
@@ -437,6 +439,33 @@
   @keyframes draw-line {
     from { stroke-dashoffset: 1; }
     to   { stroke-dashoffset: 0; }
+  }
+}
+
+/* ── Marquee: mobile/Safari fixes ───────────────────────────────────────────────
+   1. -webkit-animation fallback for Safari/iOS.
+   2. Pause-on-hover only applies on devices that support a real hover state
+      (mouse/trackpad). Plain `:hover` gets stuck "on" after a tap on iOS/touch
+      browsers (no mouseleave ever fires), which permanently freezes the
+      animation — this keeps it running on touch devices. */
+@-webkit-keyframes marquee {
+  from { -webkit-transform: translateX(0); transform: translateX(0); }
+  to   { -webkit-transform: translateX(calc(-100% - var(--gap, 2rem))); transform: translateX(calc(-100% - var(--gap, 2rem))); }
+}
+@-webkit-keyframes marquee-vertical {
+  from { -webkit-transform: translateY(0); transform: translateY(0); }
+  to   { -webkit-transform: translateY(calc(-100% - var(--gap, 2rem))); transform: translateY(calc(-100% - var(--gap, 2rem))); }
+}
+.animate-marquee {
+  -webkit-animation: marquee 40s linear infinite;
+}
+.animate-marquee-vertical {
+  -webkit-animation: marquee-vertical 40s linear infinite;
+}
+@media (hover: hover) and (pointer: fine) {
+  .group:hover .marquee-pause-on-hover {
+    animation-play-state: paused;
+    -webkit-animation-play-state: paused;
   }
 }
 

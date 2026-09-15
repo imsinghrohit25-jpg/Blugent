@@ -151,7 +151,7 @@ export function Header() {
               <Button
                 variant="ghost"
                 size="icon"
-                className="size-9 rounded-xl text-white/60 hover:bg-white/[0.04] hover:text-white lg:hidden"
+                className="size-11 rounded-xl text-white/60 hover:bg-white/[0.04] hover:text-white lg:hidden"
                 aria-label="Open menu"
               >
                 <Menu className="size-5" />

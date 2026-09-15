@@ -10,9 +10,9 @@ import { Cta } from "@/components/sections/cta";
 import { industries } from "@/constants/industries";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Solutions",
+  title: "AI Solutions | Blugent - Enterprise AI Platform",
   description:
-    "Industry-specific AI solutions from Blugent across healthcare, legal, finance, recruitment, manufacturing, retail, education, logistics, and enterprise operations.",
+    "Discover Blugent's enterprise AI solutions for sales, marketing, operations, and customer service automation.",
   path: "/solutions",
   keywords: ["AI solutions", "industry AI solutions", "enterprise AI use cases"],
 });

@@ -6,6 +6,7 @@ import { Footer } from "@/components/layout/footer";
 import { SmoothScrollProvider } from "@/components/motion/smooth-scroll-provider";
 import { ClientEffects } from "@/components/motion/client-effects";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { JsonLd, organizationJsonLd, websiteJsonLd } from "@/lib/jsonld";
 import { buildMetadata } from "@/lib/seo";
 import { siteConfig } from "@/constants/site";
@@ -27,9 +28,19 @@ const firaCode = Fira_Code({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   ...buildMetadata({
-    title: `${siteConfig.name} — ${siteConfig.tagline}`,
-    description: siteConfig.description,
+    title: "Blugent | AI Solutions & Automation for Enterprise",
+    description:
+      "Blugent delivers cutting-edge AI agents, automation, and machine learning solutions for enterprise businesses. Transform your operations with our AI-powered services.",
     path: "/",
+    keywords: [
+      "AI solutions",
+      "AI agents",
+      "automation",
+      "machine learning",
+      "enterprise AI",
+      "artificial intelligence",
+      "Blugent",
+    ],
   }),
 };
 
@@ -70,6 +81,8 @@ export default function RootLayout({
             <Footer />
           </SmoothScrollProvider>
         </TooltipProvider>
+
+        <WhatsAppButton />
       </body>
     </html>
   );

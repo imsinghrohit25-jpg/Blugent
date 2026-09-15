@@ -19,7 +19,8 @@ export function buildMetadata({
   keywords,
 }: BuildMetadataOptions): Metadata {
   const url = new URL(path, siteConfig.url).toString();
-  const fullTitle = path === "/" ? title : `${title} | ${siteConfig.name}`;
+  const fullTitle =
+    path === "/" || title.includes(siteConfig.name) ? title : `${title} | ${siteConfig.name}`;
 
   return {
     title: fullTitle,

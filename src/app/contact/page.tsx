@@ -10,9 +10,9 @@ import { ContactExtras } from "@/components/sections/contact-extras";
 import { siteConfig } from "@/constants/site";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Contact",
+  title: "Contact Blugent | Get a Free AI Consultation",
   description:
-    "Talk to Blugent's solutions team about AI agents, RAG platforms, and automation for your enterprise. Most replies within one business day.",
+    "Contact Blugent for a free AI consultation. Let's discuss how AI can transform your business operations.",
   path: "/contact",
 });
 

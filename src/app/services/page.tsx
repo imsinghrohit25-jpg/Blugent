@@ -8,9 +8,9 @@ import { ServiceExplorer } from "@/app/services/service-explorer";
 import { servicesDetail } from "@/constants/services-detail";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Services",
+  title: "AI Services | Blugent - Custom AI Agents & Automation",
   description:
-    "Blugent's full service catalog: AI agents, RAG systems, enterprise AI development, automation, consulting, and growth marketing — each with the problem it solves, our approach, tech stack, and benefits.",
+    "Explore Blugent's AI services including custom AI agents, process automation, ML model development, and AI consulting.",
   path: "/services",
   keywords: ["AI services", "AI consulting", "AI automation", "RAG systems", "AI agents"],
 });
