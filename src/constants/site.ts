@@ -4,7 +4,7 @@ export const siteConfig = {
   tagline: "Building Intelligent Enterprises with AI",
   description:
     "Blugent designs, builds, and operates enterprise AI systems — AI agents, retrieval-augmented platforms, and intelligent automation — engineered to run real business operations, not just demos.",
-  url: "https://blugent-tau.vercel.app",
+  url: "https://www.blugent.site",
   locale: "en_US",
   themeColor: "#030712",
   links: {
